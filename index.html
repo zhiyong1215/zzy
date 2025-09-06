@@ -631,36 +631,10 @@
     </footer>
 
     <script>
-        // 照片上传功能
-        document.addEventListener('DOMContentLoaded', function() {
-            const profilePhoto = document.getElementById('profile-photo');
-            const photoPlaceholder = document.getElementById('photo-placeholder');
-            
-            // 点击照片区域可以上传新照片
-            document.querySelector('.profile-image').addEventListener('click', function() {
-                const input = document.createElement('input');
-                input.type = 'file';
-                input.accept = 'image/*';
-                
-                input.onchange = function(e) {
-                    const file = e.target.files[0];
-                    if (file) {
-                        const reader = new FileReader();
-                        reader.onload = function(e) {
-                            profilePhoto.src = e.target.result;
-                            profilePhoto.style.display = 'block';
-                            photoPlaceholder.style.display = 'none';
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                };
-                
-                input.click();
-            });
-        });
-    </script>
+      
 </body>
 
 </html>
+
 
 
